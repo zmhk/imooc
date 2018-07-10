@@ -1,18 +1,15 @@
 import React from 'react';
 import { Button } from 'antd-mobile';
 import { connect } from 'react-redux';
-import { addGun, removeGun, addGunAsync } from './index.redux';
+import { addGun, removeGun, addGunAsync } from '../redux/index.redux';
 
 @connect(
     //属性
-    state => ({ num: state }),
+    state => ({ num: state.counter }),
     //方法
     { addGun, removeGun, addGunAsync }
 )
 class App extends React.Component {
-    // constructor(props){
-    //    super(props)
-    // }
     render() {
         return (
             <div>
